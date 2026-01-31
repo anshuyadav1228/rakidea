@@ -5,6 +5,61 @@
 }
 
 /* ==============================HERO SECTION================================ */
+
+a{
+    text-decoration: none;
+}
+.top-nav{
+    background-color:black ;
+    padding: 8px 0px;
+}
+.top-nav-link ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0px;
+    padding: 0px;
+}
+.top-nav-link ul li a{
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.top-nav-link ul li a img{
+    height: 18px;
+}
+.top-nav-social ul li{
+    list-style: none;
+}
+.top-nav-social ul li a{
+
+}
+.top-nav-social ul li a svg{
+    width: 20px;
+    fill: white;
+}
+.top-nav-social ul{
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0px;
+    justify-content: end;
+}
+.top-nav-social 
+.hero-section {
+    min-height: 100vh;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 120, 0, 0.25),
+        rgba(0, 0, 0, 0.95) 70%
+    );
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
 .hero-section {
     min-height: 100vh;
     background: radial-gradient(circle at center,
