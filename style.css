@@ -1,36 +1,35 @@
-*{margin: 0px;padding: 0px;box-sizing: border-box;}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 /* ==============================HERO SECTION================================ */
 .hero-section {
     min-height: 100vh;
-    background: radial-gradient(
-        circle at center,
-        rgba(255, 120, 0, 0.25),
-        rgba(0, 0, 0, 0.95) 70%
-    );
-    color: #ffffff;
+    background: radial-gradient(circle at center,
+            rgba(255, 120, 0, 0.25),
+            rgba(0, 0, 0, 0.95) 70%);
+    color: #000;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 /* Trust Bar */
 .hero-trust {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    opacity: 0.9;
+    gap: 10px;
+    font-size: 16px;
+    opacity: 1;
 }
 
-.badge-partner {
-    background: #ffffff;
-    color: #000;
-    font-weight: 600;
-    padding: 6px 10px;
-    border-radius: 6px;
-}
+
 
 .trust-text {
-    color: #eaeaea;
+    color: #000;
 }
 
 .trust-stars {
@@ -39,23 +38,23 @@
 }
 
 /* Heading */
-.hero-title {
-    font-size: 3.2rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-top: 20px;
+.section-title {
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 74px;
 }
 
-.hero-title span {
-    color: #ffffff;
+.section-title span {
+    color: #000;
 }
 
 /* Subtitle */
-.hero-subtitle {
-    font-size: 1.1rem;
+.section-subtitle {
+    font-size: 1.25rem;
     max-width: 720px;
+    line-height: 26px;
     margin: 0 auto;
-    color: #cfcfcf;
+    color: #000;
 }
 
 /* CTA */
@@ -80,16 +79,30 @@
 /* Note */
 .hero-note {
     font-size: 0.85rem;
-    color: #bdbdbd;
+    color: #000;
+}
+
+.trusted-client img {
+    width: 115px;
+}
+.trust-stars img{width: 115px;}
+
+.partners-wrapper img {
+    width: auto;
+    height: 30px;
+}
+
+.partners-wrapper {
+    margin-bottom: 15px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title {
+    .section-title {
         font-size: 2.2rem;
     }
 
-    .hero-subtitle {
+    .section-subtitle {
         font-size: 1rem;
     }
 }
