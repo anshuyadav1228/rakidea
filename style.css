@@ -1,0 +1,95 @@
+*{margin: 0px;padding: 0px;box-sizing: border-box;}
+/* ==============================HERO SECTION================================ */
+.hero-section {
+    min-height: 100vh;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 120, 0, 0.25),
+        rgba(0, 0, 0, 0.95) 70%
+    );
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Trust Bar */
+.hero-trust {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.badge-partner {
+    background: #ffffff;
+    color: #000;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.trust-text {
+    color: #eaeaea;
+}
+
+.trust-stars {
+    color: #f5b301;
+    letter-spacing: 2px;
+}
+
+/* Heading */
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+.hero-title span {
+    color: #ffffff;
+}
+
+/* Subtitle */
+.hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 720px;
+    margin: 0 auto;
+    color: #cfcfcf;
+}
+
+/* CTA */
+.btn-hero {
+    background: linear-gradient(135deg, #ff6a00, #ff3c00);
+    color: #fff;
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 90, 0, 0.35);
+}
+
+.btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255, 90, 0, 0.55);
+    color: #fff;
+}
+
+/* Note */
+.hero-note {
+    font-size: 0.85rem;
+    color: #bdbdbd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
