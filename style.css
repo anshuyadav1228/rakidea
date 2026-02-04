@@ -130,13 +130,18 @@ color: white;
 }
 .mega-menu1{
     width: 250px;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     height: 100%;
+        padding-top: 35px;
 }
 .mega-menu1 a{
-    display: block;
-    padding: 20px;
-    color: black;
+     display: block;
+    padding: 15px;
+    color: #3b3b3b;
+    padding-left: 35px;
+    font-weight: 500;
+    font-size: 17px;
+    border-bottom: 1px solid #d4d4d4;
 }
 .mega-menu2{
      width: calc(100% - 250px);
@@ -144,7 +149,7 @@ color: white;
      position: relative;
 }
 .menu-gradient-text{
-        background: linear-gradient(180deg, rgba(11, 134, 200, .15) 16.76%, rgba(11, 134, 200, 0) 87.78%);
+        background: linear-gradient(180deg, rgb(241 107 34 / 11%) 16.76%, rgba(11, 134, 200, 0) 87.78%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -163,11 +168,80 @@ color: white;
     border-bottom: 1px solid rgb(194, 194, 194);
     padding-bottom: 20px;
     color: #095ba6;
-    font-weight: 400;
+    font-weight: 600;
     padding-top: 26px;
 }
 .menu-drop-headin{
         padding-top: 26px;
+}
+.menu-drop-link{
+        display: flex;
+    flex-wrap: wrap-reverse;
+}
+.menum-link{
+    width: 33%;
+    padding: 10px;
+        border-bottom: 1px solid #ededed;
+    p{
+        margin-bottom: 0px;
+        color: black;
+        transition: 0.5s all;
+        font-weight: 500;
+    }
+    span{
+        color: grey;
+        line-height: 21px;
+        display: block;
+    }
+}
+.menum-link:hover p{
+    color:#f16b22 ;
+}
+.menu-drop-link2{
+    display: none;
+}
+.menu-drop-link2.active{
+    display: block;
+}
+.menu-drop-link1{
+    display: none;
+}
+
+.menu-drop-link1.active{
+    display: block;
+}
+.menu-drop-link-open1 , .menu-drop-link-open2{
+    display: flex!important;
+    align-items: center;
+    gap: 10px;
+}
+.menu-drop-link-open1 svg{
+    display: none;
+        width: 28px;
+    height: 21px;
+}
+
+.menu-drop-link-open2 svg{
+    display: none;
+        width: 28px;
+    height: 21px;
+}
+.top-nav-link ul li{
+    list-style: none;
+}
+
+.menu-drop-link-open1.active{
+   background: linear-gradient(
+50deg, rgb(241 107 34 / 11%) 16.76%, rgba(11, 134, 200, 0) 87.78%);
+svg{
+    display: block;
+}
+}.menu-drop-link-open2.active{
+      background: linear-gradient(
+50deg, rgb(241 107 34 / 11%) 16.76%, rgba(11, 134, 200, 0) 87.78%);
+svg{
+    display: block;
+}
 }
 .hero-section {
     position: relative;
