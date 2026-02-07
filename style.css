@@ -457,8 +457,122 @@ a {
 /* .hero-images {
   position: relative;
 } */
-.hero-mobile {
-width: 100%;}
+.hero-mobile {width: 100%;}
+
+/* ================= CLIENT SECTION ================= */
+.client-section {
+  padding: 90px 0;
+}
+
+.client-badge {
+  display: inline-block;
+  background: rgba(241,107,34,0.12);
+  color: #f16b22;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.client-title {
+  font-size: 3.125rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.client-title span {
+  color: #f16b22;
+}
+
+.client-desc {
+  color: #555;
+  max-width: 520px;
+  margin-bottom: 22px;
+}
+
+.client-points {
+  list-style: none;
+  padding: 0;
+}
+
+.client-points li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* ===== LOGO AREA ===== */
+/* wrapper */
+.logo-wrapper{
+    height:520px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+    overflow:hidden;
+    position:relative;
+}
+
+/* fade */
+.logo-wrapper::before,
+.logo-wrapper::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    height:120px;
+    z-index:5;
+    pointer-events:none;
+}
+.logo-wrapper {
+  background: #fff7f2;
+  padding: 30px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* column */
+.logo-column{
+    overflow:hidden;
+}
+
+/* inner loop */
+.logo-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:28px;
+}
+
+/* logo card */
+.logo-inner img{
+    height: 90px;
+    padding: 14px;
+    border-radius: 24px;
+    object-fit: contain;
+}
+
+/* animation */
+.down .logo-inner{
+    animation:scrollDown 18s linear infinite;
+}
+.up .logo-inner{
+    animation:scrollUp 18s linear infinite;
+}
+
+/* hover pause */
+.logo-wrapper:hover .logo-inner{
+    animation-play-state:paused;
+}
+
+/* keyframes */
+@keyframes scrollDown{
+    from{transform:translateY(0);}
+    to{transform:translateY(-50%);}
+}
+@keyframes scrollUp{
+    from{transform:translateY(-50%);}
+    to{transform:translateY(0);}
+}
 
 
 /* ===== RESPONSIVE ===== */
@@ -474,6 +588,13 @@ width: 100%;}
     .hero-image-wrap {
         margin-top: 50px;
     }
+    .logo-wrapper {
+    margin-top: 40px;
+  }
+  .logo-row {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 
