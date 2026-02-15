@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAKIDEA TECHNOLOGIES</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+<style>
+.portfolio-section{
+  padding:80px 0;
+}
+
+.portfolio-title{
+  font-size:40px;
+  font-weight:700;
+  margin-bottom:30px;
+}
+
+/* FILTER */
+.portfolio-filter{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:50px;
+}
+
+.filter-btn{
+  padding:10px 20px;
+  border:2px solid #f16b22;
+  background:transparent;
+  color:#f16b22;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+  background:#f16b22;
+  color:#fff;
+}
+
+/* GRID */
+.portfolio-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+}
+
+.portfolio-item{
+  flex:1 1 calc(33.333% - 30px);
+  height:400px;
+  overflow:hidden;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  position:relative;
+}
+
+/* IMAGE */
+.portfolio-item img{
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  transition:transform 3s ease;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .portfolio-item{
+    flex:1 1 calc(50% - 30px);
+  }
+}
+
+@media(max-width:600px){
+  .portfolio-item{
+    flex:1 1 100%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+    <header class="header-wrapper">
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 top-nav-link">
+                        <ul>
+                            <li><a href=""><img src="assets/img/india.svg" alt="">+91 9711197940</a></li>
+                            <li><a href=""><img src="assets/img/india.svg" alt="">+91 9625452415</a></a></li>
+                            <li><a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-envelope-arrow-down-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zm.192 8.159 6.57-4.027L8 9.586l1.239-.757.367.225A4.49 4.49 0 0 0 8 12.5c0 .526.09 1.03.256 1.5H2a2 2 0 0 1-1.808-1.144M16 4.697v4.974A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-1.965.45l-.338-.207z" />
+                                        <path
+                                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-1.646a.5.5 0 0 1-.722-.016l-1.149-1.25a.5.5 0 1 1 .737-.676l.28.305V11a.5.5 0 0 1 1 0v1.793l.396-.397a.5.5 0 0 1 .708.708z" />
+                                    </svg>
+                                    hello@rakidea.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 top-nav-social">
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                        <path
+                                            d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                        <path
+                                            d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                        <path
+                                            d="M581.7 188.1C575.5 164.4 556.9 145.8 533.4 139.5C490.9 128 320.1 128 320.1 128C320.1 128 149.3 128 106.7 139.5C83.2 145.8 64.7 164.4 58.4 188.1C47 231 47 320.4 47 320.4C47 320.4 47 409.8 58.4 452.7C64.7 476.3 83.2 494.2 106.7 500.5C149.3 512 320.1 512 320.1 512C320.1 512 490.9 512 533.5 500.5C557 494.2 575.5 476.3 581.8 452.7C593.2 409.8 593.2 320.4 593.2 320.4C593.2 320.4 593.2 231 581.8 188.1zM264.2 401.6L264.2 239.2L406.9 320.4L264.2 401.6z" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row-nav">
+                            <div class="nav-logo">
+                                <img src="assets/img/logo.png" alt="">
+                            </div>
+                            <div class="nav-mainlink">
+                                <ul>
+                                    <li>
+                                        <a href=""> About Us</a>
+                                    </li>
+                                    <li class="services-drop">
+                                        <a href=""> Services <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                height="16" fill="currentColor" class="bi bi-chevron-down"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                            </svg></a>
+                                        <div class="mega-drop">
+                                            <div class="mega-drop-inner">
+                                                <div class="mega-menu1">
+                                                    <a href="" class="menu-drop-link-open1 active">Application Solution
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-arrow-right"
+                                                            viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                        </svg>
+                                                    </a>
+                                                    <a href="" class="menu-drop-link-open2">Digital Solution
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-arrow-right"
+                                                            viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <div class="mega-menu2">
+                                                    <div class="mega-menu-wrapper menu-drop-link1 active">
+                                                        <div class="menu-gradient-text">
+                                                            Our Services
+
+                                                        </div>
+                                                        <div class="menu-drop-heading">
+                                                            <p> Application Solution</p>
+                                                        </div>
+                                                        <div class="menu-drop-link ">
+                                                            <a href="" class="menum-link">
+                                                                <p> Web Development</p>
+                                                                <span>Create intuitive websites & web apps that boost
+                                                                    brand
+                                                                    presence.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p> Mobile App Development</p>
+                                                                <span>Build dynamic iOS & Android apps to reach vast
+                                                                    audiences.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p> Custom Application</p>
+                                                                <span>Applications built to meet your unique business
+                                                                    needs
+                                                                    perfectly.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p> AI / ML Development</p>
+                                                                <span>Smart AI ML solutions that automate tasks and
+                                                                    boost
+                                                                    performance.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p>SaaS Application</p>
+                                                                <span>Create intuitive, engaging, and high-quality web
+                                                                    applications that boost the brand presence
+                                                                    widely.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p> API Development</p>
+                                                                <span>Integrate APIs into the application to optimize
+                                                                    performance.</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mega-menu-wrapper menu-drop-link2">
+                                                        <div class="menu-gradient-text">
+                                                            Our Services
+
+                                                        </div>
+                                                        <div class="menu-drop-heading">
+                                                            <p> Application Solution 11111 </p>
+                                                        </div>
+                                                        <div class="menu-drop-link ">
+                                                            <a href="" class="menum-link">
+                                                                <p> Web Development</p>
+                                                                <span>Create intuitive websites & web apps that boost
+                                                                    brand
+                                                                    presence.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p> Mobile App Development</p>
+                                                                <span>Build dynamic iOS & Android apps to reach vast
+                                                                    audiences.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p> Custom Application</p>
+                                                                <span>Applications built to meet your unique business
+                                                                    needs
+                                                                    perfectly.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p> AI / ML Development</p>
+                                                                <span>Smart AI ML solutions that automate tasks and
+                                                                    boost
+                                                                    performance.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p>SaaS Application</p>
+                                                                <span>Create intuitive, engaging, and high-quality web
+                                                                    applications that boost the brand presence
+                                                                    widely.</span>
+                                                            </a>
+                                                            <a href="" class="menum-link">
+                                                                <p> API Development</p>
+                                                                <span>Integrate APIs into the application to optimize
+                                                                    performance.</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href=""> Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href=""> Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href=""> Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="nav-btn">
+                                <button class="freequote">
+                                    Get a Free Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    
+<section class="portfolio-section">
+  <div class="container">
+
+    <h1 class="portfolio-title">Web Design</h1>
+
+    <div class="portfolio-filter">
+      <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="ecommerce">E-COMMERCE</button>
+      <button class="filter-btn" data-filter="service">SERVICE</button>
+      <button class="filter-btn" data-filter="informative">INFORMATIVE</button>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <article class="portfolio-item ecommerce">
+        <img src="assets/img/p1.webp">
+      </article>
+
+      <article class="portfolio-item service">
+        <img src="assets/img/p2.webp">
+      </article>
+
+      <article class="portfolio-item informative">
+        <img src="assets/img/p3.webp">
+      </article>
+
+      <article class="portfolio-item ecommerce">
+        <img src="assets/img/p4.webp">
+      </article>
+
+      <article class="portfolio-item service">
+        <img src="assets/img/p5.webp">
+      </article>
+
+      <article class="portfolio-item informative">
+        <img src="assets/img/p6.webp">
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+
+/* IMAGE SCROLL EFFECT (NO GAP) */
+document.querySelectorAll('.portfolio-item').forEach(item => {
+  const img = item.querySelector('img');
+
+  item.addEventListener('mouseenter', () => {
+    const containerHeight = item.offsetHeight;
+    const imageHeight = img.offsetHeight;
+    const scrollAmount = imageHeight - containerHeight;
+
+    if(scrollAmount > 0){
+      img.style.transform = `translateY(-${scrollAmount}px)`;
+    }
+  });
+
+  item.addEventListener('mouseleave', () => {
+    img.style.transform = `translateY(0px)`;
+  });
+});
+
+
+/* FILTER */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function(){
+
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+
+    const filter = this.getAttribute('data-filter');
+
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+
+      if(filter === 'all'){
+        item.style.display = 'block';
+      } else {
+        if(item.classList.contains(filter)){
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      }
+
+    });
+
+  });
+});
+
+</script>
+
+
+    <footer class="footer-section text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Company Info -->
+      <div class="col-lg-4 col-md-6 footer-logo">
+         <img src="./assets/img/logo.png" alt="">
+        <p class="footer-text">
+          We build SEO-friendly, fast-loading and mobile responsive websites 
+          that help businesses grow online. Professional web development services in India.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="footer-links list-unstyled">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/portfolio/">Portfolio</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-heading">Our Services</h5>
+        <ul class="footer-links list-unstyled">
+          <li><a href="/services/web-development/">Web Development</a></li>
+          <li><a href="/services/web-design/">Web Design</a></li>
+          <li><a href="/services/ecommerce-development/">E-commerce Development</a></li>
+          <li><a href="/services/seo-services/">SEO Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-heading">Contact Us</h5>
+        <p class="mb-2">
+          <a href="tel:+919711197940">📞 +91 97111 97940</a>
+        </p>
+        <p class="mb-2">
+          <a href="mailto:rakideastechnologies@gmail.com">✉️ rakideastechnologies@gmail.com</a>
+        </p>
+
+        <!-- Social Icons -->
+        <div class="social-icons mt-3">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider my-4">
+
+    <!-- Bottom -->
+    <div class="text-center small">
+      © 2026 Rakidea Technologies. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.menu-drop-link-open1').hover(function () {
+            $('.menu-drop-link1').addClass('active');
+            $('.menu-drop-link-open1').addClass('active');
+            $('.menu-drop-link2').removeClass('active');
+            $('.menu-drop-link-open2').removeClass('active');
+        });
+
+        $('.menu-drop-link-open2').hover(function () {
+            $('.menu-drop-link2').addClass('active');
+            $('.menu-drop-link1').removeClass('active');
+            $('.menu-drop-link-open2').addClass('active');
+            $('.menu-drop-link-open1').removeClass('active');
+        });
+
+    });
+
+</script>
+
+</html>
