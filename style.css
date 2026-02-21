@@ -608,6 +608,54 @@ a {
 }
 
 
+/* ==========howtowok========= */
+.how-heading{
+/* height: 500px; */
+padding-right: 50px;
+border-right: 1px solid grey;
+}
+.how-heading-img{
+    display: flex;
+}
+.how-heading-img1{
+    /* padding: 10px; */
+    width: 50%;
+    img{
+        width: 100%;
+    }
+}
+.how-heading-img1-img{
+    height: 300px;
+    padding: 20px;
+    overflow: hidden;
+}
+.how-main1{
+     width: 60px;
+    height: 60px;
+    background-color: #f16b22;
+    border-radius: 100%;
+    border: 3px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    /* font-weight: bold; */
+    font-size: 22px;
+
+}
+.how-main{
+display: flex;
+    gap: 20px;
+    position: relative;
+    left: -19px;
+    margin-bottom: 20px;
+}
+.how-main-content h3{
+    font-size: 20px;
+}
+.how-main-content{
+    width: 60%;
+}
 /* ===== RESPONSIVE ===== */
 @media (max-width: 991px) {
     .hero-title {
@@ -1122,7 +1170,86 @@ footer{
     color: #f16b22;
     margin-right: 0.5rem;
 }
+.work-process-h{
+        background: #02327c;
+    padding: 46px;
+    height: 100%;
 
+    color: white;
+    h2{
+            font-size: 62px;
+    margin: 0px;
+    }
+    p{
+        color: white;
+        margin-top: 20px;
+    }
+}
+.howtowok .col-md-6
+{
+    padding: 0px;
+}
+.how-main-wrapper{
+    padding-top: 30px;
+}
+.faq-section{
+      padding: 60px 0px;
+    background: #f7f7f782;
+}
+.faq-section-left h2{
+    font-size: 42px;
+}
+.faq-section-left{
+    padding: 30px 60px;
+}
+.faq-question{
+    width: 100%;
+    position: relative;
+    height: 200px;
+    video{
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 20px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.faq-question-c{
+    text-align: center;
+    padding: 25px;
+    position: relative;
+    button{
+            background: linear-gradient(135deg, #f16b22, #ff8c52);
+    background-color: #f16b22;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    display: block;
+    border-radius: 50px;
+    margin:auto
+    }
+
+    h3{
+        color: white;
+    }
+    p{
+        color: white;
+    }
+}
+.faq-gtr{
+    .accordion-button:not(.collapsed){
+            background: white;
+    }
+    .accordion-button:focus{
+        box-shadow: none;
+    }
+    .accordion-item{
+        margin-bottom: 20px;
+        border: 1px solid grey;
+    }
+}
 /* responsive styles */
 @media screen and (max-width: 1000px) {
     .why-choose-brand .points-grid {
